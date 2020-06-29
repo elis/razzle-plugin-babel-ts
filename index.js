@@ -7,7 +7,9 @@ function modify(defaultConfig, { target, dev }, webpack, userOptions = {}) {
   config.plugins.push(
     new ForkTSCheckerWebpackPlugin({
       checkSyntacticErrors: true,
-      eslint: true,
+      eslint: {
+        files: './src/**/*.{ts,tsx,js,jsx}' // required - same as command `eslint ./src/**/*.{ts,tsx,js,jsx} --ext .ts,.tsx,.js,.jsx`
+      },
   }))
   config.module.rules.push({
     test: /\.(ts|js)x?$/,
