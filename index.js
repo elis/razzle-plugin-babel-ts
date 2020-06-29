@@ -12,8 +12,8 @@ function modify(defaultConfig, { target, dev }, webpack, userOptions = {}) {
   }))
   config.module.rules.push({
     test: /\.(ts|js)x?$/,
-    include: [path.resolve(__dirname, 'src')],
-    loader: 'babel-loader',
+    exclude: /node_modules/,
+    loader: "babel-loader"
   })
   return config
 }
