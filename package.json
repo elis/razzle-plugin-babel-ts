@@ -23,6 +23,7 @@
   },
 	"homepage": "https://github.com/nimacsoft/razzle-plugin-babel-ts#readme",
 	"dependencies": {
+		"fork-ts-checker-webpack-plugin": "~5.0.5",
 		"@babel/preset-typescript": "~7.0.0",
 		"typescript": "*"
 	}
